@@ -18,4 +18,5 @@
 
 9. db.details.aggregate([{$match:{}},{$group:{_id:"$country"}},{$count:"Total_countries"}])
 
-10. 
+10. db.details.update({name:"Kirsten Jensen"},{$rename :{name:"Corestack"}})
+
