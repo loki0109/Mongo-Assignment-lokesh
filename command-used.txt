@@ -11,3 +11,5 @@
 
 6. db.details.find({country:'New Zealand',"Marital Status":"Married"})
 
+7. db.details.find({},{_id:0,name:1,salary:1}).sort({salary:1}).limit(10)
+
