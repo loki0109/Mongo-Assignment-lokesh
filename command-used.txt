@@ -9,3 +9,5 @@
 
 5. db.details.find({salary:{$gte:3500}}).sort({salary:-1})
 
+6. db.details.find({country:'New Zealand',"Marital Status":"Married"})
+
