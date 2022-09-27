@@ -1,2 +1,5 @@
 1. Python app contains the code.
 
+2.1 db.details.find()
+2.2 db.details.aggregate([])
+
