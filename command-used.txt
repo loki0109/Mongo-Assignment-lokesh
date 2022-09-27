@@ -13,3 +13,6 @@
 
 7. db.details.find({},{_id:0,name:1,salary:1}).sort({salary:1}).limit(10)
 
+8. db.details.createIndex({company:"text"})
+   db.details.find({$text: {$search:"Inc"}})
+
