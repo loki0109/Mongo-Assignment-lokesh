@@ -16,3 +16,6 @@
 8. db.details.createIndex({company:"text"})
    db.details.find({$text: {$search:"Inc"}})
 
+9. db.details.aggregate([{$match:{}},{$group:{_id:"$country"}},{$count:"Total_countries"}])
+
+10. 
