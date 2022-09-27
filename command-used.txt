@@ -5,3 +5,5 @@
 
 3. db.details.find({},{_id:0,name:1,salary:1,'Marital Status':1,company:1})
 
+4. db.details.aggregate([{$match:{country:'Norway'}},{$project:{name:1,_id:0}}])
+
