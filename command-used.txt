@@ -20,3 +20,4 @@
 
 10. db.details.update({name:"Kirsten Jensen"},{$rename :{name:"Corestack"}})
 
+11. db.details.deleteOne({name:"Corestack"})
