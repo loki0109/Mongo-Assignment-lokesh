@@ -7,3 +7,5 @@
 
 4. db.details.aggregate([{$match:{country:'Norway'}},{$project:{name:1,_id:0}}])
 
+5. db.details.find({salary:{$gte:3500}}).sort({salary:-1})
+
