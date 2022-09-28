@@ -21,3 +21,42 @@
 10. db.details.update({name:"Kirsten Jensen"},{$rename :{name:"Corestack"}})
 
 11. db.details.deleteOne({name:"Corestack"})
+
+12. 
+
+13. db.setProfilingLevel(2)
+
+    Profiling is an function in mongodb where we can set upto 3 level's of profiling, 
+
+    level 1 - the command is db.setProfilingLevel(0) which does not track anything and this is default 
+    if nothing is set on mongodb explicitly.
+    
+    level 2 - the command is db.setProfilingLevel(1) which will collect data for some required operations
+    and with that slowms can be used, the default value for slowms is 100, and can be incremented as 
+    per the requirment, the queries or operations that runs when executed longer than the given parameter
+    will be stated as an slow query or poorly optimised code.
+
+14. We can get to know the query is slow or not by using slowms and one more option.
+    By using slowms we can set the slowms timing and then we can see if the query is executed under that 
+    timing or not, and one more option is that we can use "Explain plan" in that there will be two 
+    2 sections - one is "Query perfomance summary" and another one is "COLLSCAN", we can get to know about 
+    everything about the query that was executed, In collscan there will be "nreturned" which indicates 
+    how many output is got back and "Execution Time" it will be used to tell us about the time that the 
+    query used to take for running that query and "Documents Examined" will be used to tell how many of the 
+    mongo documents from that database has been gone through.
+
+    We can improve the perfomance by optimising the query, in the way like remove unwanted sort or functions
+    from the query.
+
+    We have to have indices of the field that we are using that are being used frequently.
+
+    We can see the logs of the queries and find the query that is slow and try to optimize that query.
+
+    And one more is Indexing, the indexing will be used to query faster than the query without the 
+    indexing, the indexing enables us to have some sort of connection with the text and we can use some
+    text indexing when we query the required text, For now we are experienced with the text query indexing.
+
+    And there is Binary search tree, where the query will run faster than the query without 
+    BST(Binary search Tree), I am still yet to know about Binary search tree.
+
+    
