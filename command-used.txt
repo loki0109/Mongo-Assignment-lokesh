@@ -59,4 +59,23 @@
     And there is Binary search tree, where the query will run faster than the query without 
     BST(Binary search Tree), I am still yet to know about Binary search tree.
 
-    
+15. Aggregation Pipeline
+    Pipeline can be called as stages in this aggregate function, because this "{}" curly brackets is 
+    an stage defined in the "[]" square brackets, when we use aggregate function means we have to use
+    the square brackets inside the function.
+
+    The {} represents an stage, in an aggregate function there can be multiple stages, where the output
+    of the one stage is the input of the second stage the same goes on till the last stage.
+
+    syntax : db.<collection_name>.aggregate([{1st stage},{2nd stage},{3rd stage},{n stage}])
+
+    and after that we can have multiple sort function and group functions, like :$match, $group, $sort, 
+    $sum, $multiply, $average and $merge.
+
+    why we use array in aggregate function:
+
+    The simple answer for this will be we can use array of objects or stages, but not the vice versa, so it 
+    is the right way to implement an aggregate function, as it uses many stages aka objects.
+
+    And by using the array, we can give many of the array expressions.
+     
